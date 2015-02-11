@@ -23,11 +23,11 @@
     <div class="container-fluid" style="position:relative;">
       <div class="row">
         <div class="col-md-4"></div>
-        <div class="col-md-4">
+        <div class="col-md-4 vert-align">
           <h1>I want to embed a clock positioned in the middle.</h1>
           <h3>We can get more into that later</h3>
           <img src="img/clock.jpg" style="position:relative;">
-          <p style="padding-top:15px">Here's what I'm trying to do</p>
+          <p style="padding-top:15px">Here's what I'm trying to do:</p>
           <ul>
             <li>Set a background image that is responsive. You can find the image inside the "img" folder.</li>
             <li>Setup my divs in a way that will keep the information as close to the center of the page as possible - that's also centered from the top, like everything is on <a href="http://briefi.ng/">this page.</a>
@@ -36,7 +36,6 @@
       </div>
     </div>
 
-
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -44,5 +43,10 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.flexverticalcenter.js"></script>
+
+    <script>
+        $('.vert-align').flexVerticalCenter();
+    </script>
   </body>
 </html>
