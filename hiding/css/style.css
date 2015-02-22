@@ -1,5 +1,26 @@
+html{
+	height:100%;
+}
+
+body{
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+
+h1{
+	font-family: jubilat;
+	letter-spacing: 10px;
+	font-size: 5em;
+}
+
 .background-image{
   position:absolute;
 }
 p,ul,li,h1,h2,h3 { 
 color:#fff;}
+
+.flip-clock-divider .flip-clock-label {
+	color: #ffffff;
+
+}

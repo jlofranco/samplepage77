@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
 
-    <!-- Bootstrap -->
+    <!--CSS-->
+    <link rel="stylesheet" href="css/flipclock.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
@@ -17,29 +18,43 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!--Typekit Fonts-->
+    <script src="//use.typekit.net/pag7dqp.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
   </head>
   <body>
     <img src="img/hillary.jpg" alt="" class="img-responsive background-image">
-    <div class="container-fluid" style="position:relative;">
+    <div class="container-fluid" style="position:relative; padding-top:15%">
       <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 vert-align">
-          <h1>I want to embed a clock positioned in the middle.</h1>
-          <h3>We can get more into that later</h3>
-          <img src="img/clock.jpg" style="position:relative;">
-          <p style="padding-top:15px">Here's what I'm trying to do:</p>
-          <ul>
-            <li>Set a background image that is responsive. You can find the image inside the "img" folder.</li>
-            <li>Setup my divs in a way that will keep the information as close to the center of the page as possible - that's also centered from the top, like everything is on <a href="http://briefi.ng/">this page.</a>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h1 class="text-center text-uppercase">hillary's hiding</h1>
+          <h3 class= "text-center"><em>It's clear that </em></h3>
+          <div class="clock" style="margin:0 auto; margin-top:30px"></div>
+
+            <script type="text/javascript">
+              $(document).ready(function(){
+              var date  = new Date(2015, 00, 01);
+                var now   = new Date();
+                var diff  = now.getTime()/1000 - date.getTime()/1000;
+                console.log(date,now);  
+                clock = $('.clock').FlipClock(diff, {
+                  clockFace: 'DailyCounter',
+                  countdown: false
+                  });
+              }); 
+            </script>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
 
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
@@ -48,5 +63,7 @@
     <script>
         $('.vert-align').flexVerticalCenter();
     </script>
+    
+    <script src="js/flipclock.min.js"></script>
   </body>
 </html>
